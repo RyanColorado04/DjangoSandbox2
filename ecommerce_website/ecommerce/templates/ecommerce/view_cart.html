@@ -1,0 +1,16 @@
+{% extends 'ecommerce/base.html' %}
+
+{% block content %}
+    <h2>Shopping Cart</h2>
+    <ul>
+        {% for item in order_items %}
+            <li>
+                <strong>{{ item.product.name }}</strong> - {{ item.quantity }}
+            </li>
+        {% empty %}
+            <li>Cart is empty.</li>
+        {% endfor %}
+    </ul>
+    <p>Total Price: {{ order.total_price }}</p>
+    <a href="{% url 'checkout' %}">Checkout</a>
+{% endblock %}

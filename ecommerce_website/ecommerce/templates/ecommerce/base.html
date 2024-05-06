@@ -1,0 +1,15 @@
+<!-- ecommerce/templates/ecommerce/base.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>E-commerce Website</title>
+</head>
+<body>
+    <div>
+        <h1><a href="{% url 'product_list' %}">E-commerce Website</a></h1>
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
